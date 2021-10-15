@@ -30,9 +30,7 @@ class Secretword:
             # in a separate element in the list.
             for word in file:
                 words_list.append(word.strip())
-
         self.word = words_list[random.randint(0, len(words_list))].lower()
-
         self.word_chart = ["_"] * len(self.word)
         self.wrong_letters = []
 
@@ -63,5 +61,4 @@ class Secretword:
         if len(self.wrong_letters) > 0:
             for element in self.wrong_letters:
                 w_letters += ' ' + element
-
         return w_chart, w_letters
